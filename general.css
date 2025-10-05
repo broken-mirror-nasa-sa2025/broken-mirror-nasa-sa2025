@@ -1,0 +1,94 @@
+[lang] { display: none; }
+.lang-en [lang="en"] { display: block; }
+.lang-ua [lang="ua"] { display: block; }
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  background-image: url("head.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+header p {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.lang-switch {
+  margin-top: 1rem;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.lang-switch button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #2575fc;
+  color: #fff;
+  transition: background 0.2s;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.lang-switch button.active {
+  background: #6a11cb;
+}
+
+.lang-switch button:hover {
+  background: #1747a6;
+}
+
+.split-word {
+  position: relative;
+  display: inline-block;
+  font-weight: 600;
+  color: transparent;
+  line-height: 1em;
+}
+
+.split-word::before,
+.split-word::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  color: #2575fc;
+  transition: transform 0.3s ease;
+  pointer-events: none;
+}
+
+.split-word::before {
+  clip-path: inset(0 0 40% 0);
+  transform: translateX(-2px);
+}
+
+.split-word::after {
+  clip-path: inset(60% 0 0 0);
+  transform: translateX(2px);
+}
+
+.split-word:hover::before {
+  transform: translateX(3px);
+}
+
+.split-word:hover::after {
+  transform: translateX(-3px);
+}

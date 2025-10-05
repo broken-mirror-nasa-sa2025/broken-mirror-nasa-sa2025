@@ -1,0 +1,26 @@
+.popup-word {
+  text-decoration: underline dotted;
+  cursor: help;
+  position: relative;
+}
+
+.popup-box {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 12px;
+  width: 400px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.popup-content {
+  display: flex;
+  gap: 16px;
+}
+
+.popup-content .col {
+  flex: 1;
+}
